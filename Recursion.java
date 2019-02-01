@@ -9,6 +9,12 @@ public class Recursion {
     System.out.println("1: " + sqrt(1, .001) + "; " + Math.sqrt(1));
     System.out.println(".5: " + sqrt(.5, .001) + "; " + Math.sqrt(.5));
 
+    // Fib testing //
+    System.out.println("Fib 0: " + fib(0));
+    System.out.println("Fib 1: " + fib(1));
+    System.out.println("Fib 3: " + fib(3));
+    System.out.println("Fib 5: " + fib(5));
+    System.out.println("Fib 50: " + fib(50));
 
 
   }
@@ -25,13 +31,13 @@ public class Recursion {
     return helperSquareRoot(n, guess, percent);
   }
 
-  public static int fib(int n){
+  public static long fib(long n){
     if (n < 2) return 1;
     return fibHelp(n, 1, 1);
   }
 
-  private static int fibHelp(int n, int prev, int prev2) {
-    if (n==2) return prev;
+  private static long fibHelp(long n, long prev, long prev2) {
+    if (n==2) return prev+prev2;
     return fibHelp(n-1, prev+prev2, prev);
   }
 
