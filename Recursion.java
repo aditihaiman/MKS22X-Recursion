@@ -41,4 +41,14 @@ public class Recursion {
     return fibHelp(n-1, prev+prev2, prev);
   }
 
+  public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    if (n<0) return sums;
+    return sumsHelp(n, sums);
+  }
+
+  private static ArrayList<Integer> sumsHelp(int n, ArrayList<Integer> sums){
+    sums.add(n);
+  }
+
 }
