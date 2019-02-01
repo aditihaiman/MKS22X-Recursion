@@ -25,4 +25,14 @@ public class Recursion {
     return helperSquareRoot(n, guess, percent);
   }
 
+  public static int fib(int n){
+    if (n < 2) return 1;
+    return fibHelp(n, 1, 1);
+  }
+
+  private static int fibHelp(int n, int prev, int prev2) {
+    if (n==2) return prev;
+    return fibHelp(n-1, prev+prev2, prev);
+  }
+
 }
