@@ -31,12 +31,12 @@ public class Recursion {
     return helperSquareRoot(n, guess, percent);
   }
 
-  public static long fib(long n){
+  public static int fib(int n){
     if (n < 2) return 1;
     return fibHelp(n, 1, 1);
   }
 
-  private static long fibHelp(long n, long prev, long prev2) {
+  private static int fibHelp(int n, int prev, int prev2) {
     if (n==2) return prev+prev2;
     return fibHelp(n-1, prev+prev2, prev);
   }
