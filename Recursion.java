@@ -18,6 +18,10 @@ public class Recursion {
 
     //makeAllSums testing //
     System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(0));
+    System.out.println(makeAllSums(1));
+    System.out.println(makeAllSums(4));
+    //System.out.println(makeAllSums(100));
 
   }
 
