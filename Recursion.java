@@ -45,15 +45,17 @@ public class Recursion {
 
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> sums = new ArrayList<Integer>();
-    sumsHelp(n, sums, 0);
-    return sums;
+    return sumsHelp(n, sums, 0);
   }
 
-  private static void sumsHelp(int n, ArrayList<Integer> sums, int psum){
-    if (n<0) sums.add(0);
-    sums.add(psum);
+  private static ArrayList<Integer> sumsHelp(int n, ArrayList<Integer> sums, int psum){
+    if (n<=0) {
+      sums.add(psum);
+      return sums;
+    }
     sumsHelp(n-1, sums, psum+n);
     sumsHelp(n-1, sums, psum);
+    return sums;
   }
 
   // private static ArrayList<Integer> addArr(ArrayList<Integer> arr, ArrayList<Integer> arr2) {
