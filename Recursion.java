@@ -16,6 +16,8 @@ public class Recursion {
     System.out.println("Fib 5: " + fib(5));
     System.out.println("Fib 50: " + fib(50));
 
+    //makeAllSums testing //
+    System.out.println(makeAllSums(3));
 
   }
 
@@ -43,12 +45,22 @@ public class Recursion {
 
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> sums = new ArrayList<Integer>();
-    if (n<0) return sums;
-    return sumsHelp(n, sums);
+    sumsHelp(n, sums, 0);
+    return sums;
   }
 
-  private static ArrayList<Integer> sumsHelp(int n, ArrayList<Integer> sums){
-    sums.add(n);
+  private static void sumsHelp(int n, ArrayList<Integer> sums, int psum){
+    if (n<0) sums.add(0);
+    sums.add(psum);
+    sumsHelp(n-1, sums, psum+n);
+    sumsHelp(n-1, sums, psum);
   }
+
+  // private static ArrayList<Integer> addArr(ArrayList<Integer> arr, ArrayList<Integer> arr2) {
+  //   for (int x = 0; x<arr2.size(); x++) {
+  //     arr.add(arr2.get(x));
+  //   }
+  //   return arr;
+  // }
 
 }
