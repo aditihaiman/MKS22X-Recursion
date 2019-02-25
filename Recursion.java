@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Recursion {
+public class recursion {
 
   public static void main(String[] args) {
     // Sqrt Testing //
@@ -38,8 +38,8 @@ public class Recursion {
   }
 
   public static int fib(int n){
-    if (n < 2) return 1;
-    return fibHelp(n, 1, 1);
+    if (n < 2) return n;
+    return fibHelp(n, 1, 0);
   }
 
   private static int fibHelp(int n, int prev, int prev2) {
