@@ -5,7 +5,7 @@ public class Driver {
 
   public static void main(String[] args) {
 
-    
+    testSqrt(5);
 
   }
 
@@ -72,8 +72,11 @@ public class Driver {
     }
   }
 
-  public static boolean closeEnough(double ans, double correct) {
-    return Math.abs(ans-correct) < .01;
+  public static boolean closeEnough(double a, double b){
+    if(a==0.0 && b==0.0)return true;
+    if(a==0.0)return b < 0.00000000001;
+    if(b==0.0)return a < 0.00000000001;
+    return Math.abs(a-b)/a < 0.0001;//This is the normal % difference allowed
   }
 
 
